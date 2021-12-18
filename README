@@ -1,0 +1,19 @@
+Aplicación de Fitness - Lógica de negocio.
+
+Introducción: Es una app de dos partes.
+
+Una parte es el lado del "usuario". Donde puede ver "planes" de entrenamiento
+puestos a disposicion por otro tipo de usuario llamado "entrenador".
+
+El "plan" está conformado por días (Que se pueden saltear o faltar)
+Por ejemplo: Dia 1, Dia 2 o Cardio, musculacion, etc.
+Los dias tienen series y las series tienen ejercicios.
+Se pueden agregar descansos entre series, y entre ejercicios.
+Cada plan está compuesto por 1 nombre, 1 descripcion y series
+
+El entrenador puede armar los planes y crear sus propios ejercicios.
+
+Cada ejercicio está compuesto de 1 video y/o carrusel de imagenes ilustrativas.
+(Reportable)
+Un nombre, una descripción, un tipo (cardio, fuerza, musculacion).
+
