@@ -1,0 +1,534 @@
+{
+	"info": {
+		"_postman_id": "863e36bb-d584-45cc-bb09-d0ef6f1c0c81",
+		"name": "VirtualGym/Healthy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TRAINERS",
+			"item": [
+				{
+					"name": "TRAINERS - GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/trainers",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"trainers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TRAINERS - GET ONE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/trainers/:username",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"trainers",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": "Agus"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TRAINERS - CREATE ONE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"trainer\",\r\n  \"email\": \"dagustin.soria@hotmail.com\",\r\n  \"password\": \"123\",\r\n  \"firstname\": \"Agus\",\r\n  \"lastname\": \"Soria\",\r\n  \"image\": \"http://www.copyflash.net/web/wp-content/uploads/bfi_thumb/our-team-4-1-32gnuklh724qwr4b45h6h6@2x.jpg\",\r\n  \"bio\": \"Amplia trayectoria profesional como entrenador\"\r\n}"
+						},
+						"url": {
+							"raw": "{{localUrl}}/trainers",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"trainers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TRAINERS - UPDATE ONE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"exercises\": [\"6118560b57e21e29d80a9416\", \"6118567957e21e29d80a9418\", \"611856a157e21e29d80a941a\", \"611856ef57e21e29d80a941d\" ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUrl}}/trainers/:username",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"trainers",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": "trainer"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TRAINERS - DELETE ONE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/trainers/:username",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"trainers",
+								":username"
+							],
+							"variable": [
+								{
+									"key": "username",
+									"value": "Agus"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EXERCISES",
+			"item": [
+				{
+					"name": "EXERCISES - GET ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{localUrl}}/exercises",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"exercises"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EXERCISES - GET ONE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/exercises/:id",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"exercises",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "611856ef57e21e29d80a941d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EXERCISES - CREATE ONE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Bici fija\",\r\n  \"description\": \"Cardio en bici fija\",\r\n  \"video\": \"https://www.youtube.com/watch?v=uJ78KNl02qg\",\r\n  \"image\": \"https://drcormillot.com.ar/wp-content/uploads/2019/08/bicicleta-fija.jpg\"\r\n}"
+						},
+						"url": {
+							"raw": "{{localUrl}}/exercises",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"exercises"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EXERCISES - UPDATE ONE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"cardio\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUrl}}/exercises/:id",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"exercises",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6118582757e21e29d80a9428"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EXERCISES - DELETE ONE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/exercises/:id",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"exercises",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6118398a11246c2688893e29"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PLANS",
+			"item": [
+				{
+					"name": "PLANS - GET ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{localUrl}}/plans",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"plans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PLANS - GET ONE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/plans/:id",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"plans",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61185df675af7423d8141529"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PLANS - CREATE ONE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Rutina musculación Pull/Push hombre\",\r\n    \"days\":[{\r\n        \"day\": \"monday\",\r\n        \"exercises\": [{\r\n            \"exercise\": \"6118582757e21e29d80a9428\",\r\n            \"series\": 1,\r\n            \"repetitions\": 0,\r\n            \"weight\": 0,\r\n            \"restSerie\": 0,\r\n            \"restExercise\": 0,\r\n            \"positionInPlan\": 1,\r\n            \"time\": 600\r\n        },\r\n        {\r\n            \"exercise\": \"6118567957e21e29d80a9418\",\r\n            \"series\": 1,\r\n            \"repetitions\": 0,\r\n            \"weight\": 0,\r\n            \"restSerie\": 0,\r\n            \"restExercise\": 0,\r\n            \"positionInPlan\": 1,\r\n            \"time\": 600  \r\n        },\r\n        {\r\n            \"exercise\": \"611856a157e21e29d80a941a\",\r\n            \"series\": 1,\r\n            \"repetitions\": 0,\r\n            \"weight\": 0,\r\n            \"restSerie\": 0,\r\n            \"restExercise\": 0,\r\n            \"positionInPlan\": 1,\r\n            \"time\": 600\r\n        },\r\n        {\r\n            \"exercise\": \"611856ef57e21e29d80a941d\",\r\n            \"series\": 1,\r\n            \"repetitions\": 0,\r\n            \"weight\": 0,\r\n            \"restSerie\": 0,\r\n            \"restExercise\": 0,\r\n            \"positionInPlan\": 1,\r\n            \"time\": 600\r\n        }\r\n        ]\r\n    }]\r\n}"
+						},
+						"url": {
+							"raw": "{{localUrl}}/plans",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"plans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PLANS - UPDATE ONE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"monday\": [\r\n            {\r\n                \"exercise\": \"6118560b57e21e29d80a9416\",\r\n                \"series\": 3,\r\n                \"weight\": 20,\r\n                \"restSerie\": 30,\r\n                \"restExercise\": 60,\r\n                \"orderId\": 3\r\n            },\r\n            {\r\n                \"exercise\": \"6118567957e21e29d80a9418\",\r\n                \"series\": 3,\r\n                \"weight\": 20,\r\n                \"restSerie\": 30,\r\n                \"restExercise\": 60,\r\n                \"numberId\": 1\r\n            },\r\n            {\r\n                \"exercise\": \"611856a157e21e29d80a941a\",\r\n                \"series\": 3,\r\n                \"weight\": 20,\r\n                \"restSerie\": 30,\r\n                \"restExercise\": 60,\r\n                \"numberId\": 4\r\n            },\r\n            {\r\n                \"exercise\": \"611856ef57e21e29d80a941d\",\r\n                \"series\": 3,\r\n                \"weight\": 20,\r\n                \"restSerie\": 30,\r\n                \"restExercise\": 60,\r\n                \"numberId\": 2\r\n            }\r\n        ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localUrl}}/plans/:id",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"plans",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61185b14c728811b14c826f6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PLANS - DELETE ONE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/plans/:id",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"plans",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "61185ec06128080e5c07f33d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "USERS - GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/users",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS - GET ONE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/users/:url",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"users",
+								":url"
+							],
+							"variable": [
+								{
+									"key": "url",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS - CREATE ONE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"My First Post\",\r\n    \"url\": \"My-first-post\",\r\n    \"content\": \"This is my first post\",\r\n    \"image\": \"https://images.pexels.com/photos/7664374/pexels-photo-7664374.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940\"\r\n}"
+						},
+						"url": {
+							"raw": "{{localUrl}}/users",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS - UPDATE ONE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/users/:url",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"users",
+								":url"
+							],
+							"variable": [
+								{
+									"key": "url",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS - DELETE ONE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localUrl}}/users/:url",
+							"host": [
+								"{{localUrl}}"
+							],
+							"path": [
+								"users",
+								":url"
+							],
+							"variable": [
+								{
+									"key": "url",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
