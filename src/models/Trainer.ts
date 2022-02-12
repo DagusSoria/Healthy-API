@@ -1,7 +1,7 @@
 import { Schema, model } from 'mongoose';
 
 const TrainerSchema = new Schema({
-  username: { type: String, unique: true },
+  username: { type: String },
   password: { type: String },
   firstname: { type: String },
   lastname: { type: String },

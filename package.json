@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "ts": "tsc -w",
-    "dev": "nodemon ./build/server.js"
+    "dev": "nodemon ./build/server.js",
+    "start": "nodemon ./src/server.ts"
   },
   "author": "Daniel Agustín Soria",
   "license": "ISC",

@@ -17,3 +17,5 @@ Cada ejercicio está compuesto de 1 video y/o carrusel de imagenes ilustrativas.
 (Reportable)
 Un nombre, una descripción, un tipo (cardio, fuerza, musculacion).
 
+Scripts
+run: npm run dev

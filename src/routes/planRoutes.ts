@@ -37,6 +37,19 @@ class PlanRoutes {
   async getPlan(req: Request, res: Response) {
     const { id } = req.params;
     const plan = await Plan.findById(id);
+
+    console.log(plan);
+    for (let j = 0; j != plan.days.length; j++){
+      let planDay = plan.days[j];
+      for (let k = 0; k != planDay.exercises.length; k++){
+        let exercise = planDay.exercises[k];
+        console.log("ejercicio", exercise);
+        let exerciseFromDb = await Exercise.findById(exercise.exercise);
+        console.log("ejercicio de la base de datos", exerciseFromDb);
+        exercise.exercise = exerciseFromDb;
+      }
+    }
+    
     res.json(plan);
   }
 
