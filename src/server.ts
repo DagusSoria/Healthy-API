@@ -1,6 +1,6 @@
 import express, { json } from 'express';
-import morgan from 'morgan';
 import helmet from 'helmet';
+import morgan from 'morgan';
 import compression from 'compression';
 import cors from 'cors'
 import mongoose from 'mongoose';
@@ -18,6 +18,7 @@ class Server {
     this.app = express();
     this.config();
     this.routes();
+    this.start();
   }
 
   config() {
@@ -27,7 +28,8 @@ class Server {
     mongoose.set('useFindAndModify', true);
     mongoose.connect(MONGO_URI || process.env.MONGODB_URI, {
       useNewUrlParser: true,
-      useCreateIndex: true
+      useCreateIndex: true,
+      useUnifiedTopology: true,
     }).then(db => console.log("db is connected"));
     
     //settings
@@ -57,4 +59,3 @@ class Server {
 }
 
 const server = new Server();
-server.start();
